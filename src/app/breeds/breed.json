@@ -1,0 +1,237 @@
+[
+    {
+        "breed": "Labrador Retriever",
+        "id": 1,
+        "breedType": "Purebred",
+        "origin": "Chavakadu",
+        "age": "2 months",
+        "popularity": "1",
+        "temperament": [
+            "Cheerful",
+            "Gentle",
+            "Friendly",
+            "Intelligent"
+        ],
+        "hypoallergenic": "No",
+        "intelligence": 7,
+        "price": 8000,
+        "photo": "https://www.thelabradorsite.com/wp-content/uploads/2020/05/10-tips.jpg"
+    },
+    {
+        "breed": "Abyssinian Cat",
+        "id": 2,
+        "breedType": "Aby-grabbys",
+        "origin": "Kannur",
+        "age": "2 months",
+        "popularity": "1",
+        "temperament": [
+            "always in motion",
+            "Gentle",
+            "Friendly",
+            "Intelligent"
+        ],
+        "hypoallergenic": "No",
+        "intelligence": 7,
+        "price": 3000,
+        "photo": "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Abyssinian_body_7.jpg?itok=Xleasaxh"
+    },
+    {
+        "breed": "German Shepard",
+        "id": 3,
+        "breedType": "Purebred",
+        "origin": "Aluva",
+        "age": "2 months",
+        "popularity": "2",
+        "temperament": [
+            "Corageous",
+            "Intelligent",
+            "Loyal",
+            "Watchful"
+        ],
+        "hypoallergenic": "No",
+        "intelligence": 3,
+        "price": 10000,
+        "photo": "https://miro.medium.com/max/875/0*LFS-oAro8b1qmeH9.jpg"
+    },
+    {
+        "breed": "Bengal Cat",
+        "id": 4,
+        "breedType": "Bengal Cat",
+        "origin": "Palluruthy",
+        "age": "2 months",
+        "popularity": "1",
+        "temperament": [
+            "always in motion",
+            "Gentle",
+            "Friendly",
+            "Intelligent"
+        ],
+        "hypoallergenic": "No",
+        "intelligence": 7,
+        "price": 3000,
+        "photo": "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Bengal_body_6.jpg?itok=wPleMAcc"
+    },
+    {
+        "breed": "Golden Retriever",
+        "id": 5,
+        "breedType": "Purebred",
+        "origin": "Thoppumpady",
+        "age": "2 months",
+        "popularity": "3",
+        "temperament": [
+            "Intelligent",
+            "Kind",
+            "Friendly",
+            "Confident"
+        ],
+        "hypoallergenic": "No",
+        "intelligence": 4,
+        "price": 12000,
+        "photo": "https://images.squarespace-cdn.com/content/v1/54e7a1a6e4b08db9da801ded/fdecc7f0-42bf-4696-bd4c-73a868e5d1d2/81.jpg?format=1000w"
+    },
+    {
+        "breed": "Bombay Cat",
+        "id": 6,
+        "breedType": "Bombay Cat",
+        "origin": "Vyttila",
+        "age": "2 months",
+        "popularity": "1",
+        "temperament": [
+            "always in motion",
+            "Gentle",
+            "Friendly",
+            "Intelligent"
+        ],
+        "hypoallergenic": "No",
+        "intelligence": 7,
+        "price": 3000,
+        "photo": "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Bombay_body_6.jpg?itok=82CXfifj"
+    },
+    {
+        "breed": "French Bulldog",
+        "id": 7,
+        "breedType": "Purebred",
+        "origin": "Fortkochi",
+        "age": "2 months",
+        "popularity": "4",
+        "temperament": [
+            "Playful",
+            "Sociable",
+            "Friendly",
+            "Lively",
+            "Patient"
+        ],
+        "hypoallergenic": "No",
+        "intelligence": 58,
+        "price": 18000,
+        "photo": "https://www.frenchbulldogbreed.net/wp-content/uploads/2018/06/French-bulldog-puppy-for-sale-Toby-02-1.jpg"
+    },
+    {
+        "breed": "Bulldog",
+        "id": 8,
+        "breedType": "Purebred",
+        "origin": "Mattanchery",
+        "age": "2 months",
+        "popularity": "5",
+        "temperament": [
+            "Friendly",
+            "Docile",
+            "Willful",
+            "Gregarious"
+        ],
+        "hypoallergenic": "No",
+        "intelligence": 77,
+        "price": 13000,
+        "photo": "https://cdn.pixabay.com/photo/2020/07/20/06/42/english-bulldog-5422018__340.jpg"
+    },
+    {
+        "breed": "Himalayan Cat Breed",
+        "id": 9,
+        "breedType": "Himalayan Cat Breed",
+        "origin": "Tripunitura",
+        "age": "2 months",
+        "popularity": "1",
+        "temperament": [
+            "always in motion",
+            "Gentle",
+            "Friendly",
+            "Intelligent"
+        ],
+        "hypoallergenic": "No",
+        "intelligence": 7,
+        "price": 5000,
+        "photo": "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Himilayan_body_6.jpg?itok=c9k_RopN"
+    },
+    {
+        "breed": "Beagle",
+        "id": 10,
+        "breedType": "Purebred",
+        "origin": "Maradu",
+        "age": "2 months",
+        "popularity": "6",
+        "temperament": [
+            "Gentle",
+            "Intelligent",
+            "Even Tempered",
+            "Determined"
+        ],
+        "hypoallergenic": "No",
+        "intelligence": 72,
+        "price": 18000,
+        "photo": "https://www.pdsa.org.uk/media/7705/beagle-outdoors-gallery-8-min.jpg?anchor=center&mode=crop&quality=100&height=500&bgcolor=fff&rnd=132158008000000000"
+    },
+    {
+        "breed": "Poodle",
+        "id": 11,
+        "breedType": "Purebred",
+        "origin": "Ernakulam",
+        "age": "2 months",
+        "popularity": "7",
+        "temperament": [
+            "Intelligent",
+            "Faithful",
+            "Trainable",
+            "Instinctual"
+        ],
+        "hypoallergenic": "Yes",
+        "intelligence": 2,
+        "price": 14000,
+        "photo": "https://www.akc.org/wp-content/uploads/2020/10/Poodle-puppy-sitting-on-the-bed-in-the-morning-500x486.jpg"
+    },
+    {
+        "breed": "Rottweiler",
+        "id": 12,
+        "breedType": "Purebred",
+        "origin": "Kochi",
+        "age": "2 months",
+        "popularity": "8",
+        "temperament": [
+            "Intelligent",
+            "Corageous",
+            "Fearless",
+            "Confident"
+        ],
+        "hypoallergenic": "No",
+        "intelligence": 9,
+        "price": 15000,
+        "photo": "https://www.akc.org/wp-content/uploads/2021/03/Rottweiler-puppy-fetching-a-toy-in-the-grass.jpeg"
+    },
+    {
+        "breed": "Boxer",
+        "id": 13,
+        "breedType": "Purebred",
+        "origin": "Kumbalanghi",
+        "age": "2 months",
+        "popularity": "11",
+        "temperament": [
+            "Playful",
+            "Friendly",
+            "Devoted",
+            "Loyal"
+        ],
+        "hypoallergenic": "No",
+        "intelligence": 48,
+        "price": 17000,
+        "photo": "https://media.istockphoto.com/id/1264925725/photo/boxer-puppy-dog.jpg?s=612x612&w=0&k=20&c=Rn-dKteSJ9zEKmBujUTU5WBWmJFwmqUw6lD3fkqMypM="
+    }
+]

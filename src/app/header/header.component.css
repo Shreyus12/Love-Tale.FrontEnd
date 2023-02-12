@@ -1,0 +1,374 @@
+.blue-color {
+  color: rgb(26, 26, 231);
+}
+
+.banner {
+
+  background-image: url("src/app/header/banner1.png");
+  height: 270px;
+  background-repeat: repeat;
+  margin-top: -105px;
+  position: relative;
+  width: 97.7%;
+
+
+
+}
+
+
+.fitter {
+
+  background-color: rgb(215, 82, 255);
+  width: 100%;
+  height: 40px;
+  margin-top: -108px;
+
+}
+
+
+@media only screen and (max-width: 700px) {
+  .banner {
+    background-size: contain;
+
+
+
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .fitter {
+    margin-top: -128px;
+
+
+
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .home {
+
+    margin-left: -40px;
+
+
+
+
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .navbar-toggler {
+    display: none;
+  }
+
+  .collapse.navbar-collapse {
+
+    display: contents;
+
+
+  }
+
+  .addyour {
+    display: contents;
+
+
+  }
+
+  .addyours {
+    width: 100%;
+    text-align: center;
+    -webkit-animation: vibrate-1 0.3s linear infinite both;
+    animation: vibrate-1 0.3s linear infinite both;
+
+  }
+
+  .newhome {
+    width: 100%;
+    text-align: center;
+
+  }
+
+
+}
+
+
+
+.lovetale {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.addyour {
+  -webkit-animation: vibrate-1 0.3s linear infinite both;
+  animation: vibrate-1 0.3s linear infinite both;
+
+}
+
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+
+@media only screen and (min-width: 700px) {
+.newhome
+{
+  margin-right: 100px;
+}
+}
+
+
+
+/* //////////////////////////// */
+
+
+
+/* html,
+body {
+  background-color: #00ffcc;
+  text-align: center;
+  font-family: "Raleway", Helvetica, sans-serif;
+  min-width: 320px;
+} */
+
+.headers {
+  font-size: 2em;
+  font-weight: bold;
+
+}
+
+#form-outer {
+
+  margin: 0 auto;
+  border-radius: 4px;
+  width: 100%;
+  padding-top: 20px;
+}
+
+
+.breed
+{
+  margin-top: 100px;
+}
+.seller
+{
+  margin-top: 65px;
+  margin-right: 70px;
+
+}
+
+
+#offcanvasWithBothOptions
+{
+  background-image: url('https://media.istockphoto.com/id/886661400/photo/funny-pet-cat-showing-a-placard-isolated-on-white-background-blank-template-and-copy-space.jpg?s=612x612&w=0&k=20&c=zZe3fK2WLOkdDP_ZyTPP0phzLNTnIoByd6WDDVOvWVg=');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 459px 800px;
+}
+
+
+#offcanvasRight
+{
+  background-image: url('https://cdn.xxl.thumbs.canstockphoto.com/black-chihuahua-dog-stands-behind-a-white-sheet-of-paper-on-a-white-background-mock-up-stock-photos_csp74570930.jpg');
+  background-repeat: no-repeat;
+  background-position: top top;
+  background-size: 400px ;
+
+}
+
+
+.labeled {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-left: -30px;
+}
+
+.rightelement {
+  display: inline-block;
+  text-align: left;
+  width: 60%;
+  vertical-align: middle;
+  margin-top: 5px;
+}
+
+.inputs {
+  height: 40px;
+  width: 100%;
+
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+#userAge {
+  width: 40px;
+}
+
+.rating,
+input[type="checkbox"] {
+  float: left;
+  margin-right: 5px;
+}
+
+#submit {
+  background-color: #59ace0;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 96px;
+  margin: 10px;
+  border: 0px solid;
+}
+
+.dropdown {
+  height: 35px;
+  width: 140px;
+  padding: 5px;
+  margin: 10px;
+  margin-top: 15px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+.radio,
+.checkbox {
+  position: relative;
+  left: -43px;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 833px) {
+  .inputs {
+    width: 80%;
+  }
+  select {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .labeled {
+    width: 100%;
+    text-align: left;
+  }
+  .rightelement {
+    width: 80%;
+    float: left;
+  }
+  .inputs {
+    width: 100%;
+  }
+  select {
+    width: 100%;
+  }
+}
+
+#survey-form
+{
+  text-align: center;
+}
+
+
+
+
+

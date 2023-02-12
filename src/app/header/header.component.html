@@ -1,0 +1,234 @@
+<h1 class="lovetale text-center mb-4 p-2"><i class="fa-solid fa-heart blue-color animate__animated animate__flip"></i>
+  Love-Tale <i class="fa-flip-horizontal fa-solid fa-dog blue-color animate__animated animate__flip"></i><i
+    class="fa-flip-horizontal fa-solid fa-cat blue-color animate__animated animate__flip"></i></h1>
+
+ 
+
+
+<div class="banner animate__animated animate__headShake">
+
+</div>
+
+<div class="fitter"></div>
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(215, 82, 255);">
+  <div class="container">
+    <a class="navbar-brand" href="#!"><img class="animate__animated animate__fadeInLeftBig" width="80px"
+        src="https://static.vecteezy.com/system/resources/previews/010/892/346/original/dog-paw-free-png.png"
+        alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+        class="navbar-toggler-icon"></span></button>
+    <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link home text-white" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 d-flex flex-row">
+        <input (keyup)="search($event)" class="form-control mr-sm-2 " type="search" placeholder="Search breed"
+          aria-label="Search">&nbsp;&nbsp;&nbsp;
+        <!-- <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button> -->
+      </form>
+
+
+      <div style="width: 20px;"></div>
+
+      <div class="addyours">
+        
+        <button style="height: 50px;"  class="addyour btn btn-outline-light my-2 my-sm-0" type="button"
+          data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions">Add your Pet</button>&nbsp;&nbsp;&nbsp;
+
+        <button style="height: 50px;" class="addyour btn btn-outline-light my-2 my-sm-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add Seller Details</button>&nbsp;&nbsp;&nbsp;
+
+        <button  style="height: 50px;" routerLink="/petnews" class="addyour btn btn-outline-light my-2 my-sm-0" type="button">Pet News</button>
+
+      </div>
+
+    </div>
+
+    <div class="newhome">
+      <h3 class="text-light">Finding forever homes</h3>
+    </div>
+
+  </div>
+
+
+</nav>
+
+
+
+
+<!-- off canvas Left-->
+
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+  aria-labelledby="offcanvasWithBothOptionsLabel" >
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"></h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body breed">
+
+    <h1 id="title">Add your Pet</h1>
+
+    <div id="form-outer" >
+      <form [formGroup]="breedForm" id="survey-form">
+        <div class="rowTab">
+          <div class="labeled">
+            <label id="name-label" for="name">* Breed Name: </label>
+          </div>
+          <div class="rightelement">
+            <input autofocus name="breed" formControlName="breed" type="text" id="name" class="inputs"
+              placeholder="Enter name" class="form-control" required>
+
+          </div>
+        </div>
+        <div class="rowTab">
+          <div class="labeled">
+            <label id="number-label" for="id">* Breed Id: </label>
+          </div>
+          <div class="rightelement">
+            <input name="id" formControlName="id" type="text" id="number" min="1" max="125" class="inputs"
+              placeholder="id">
+              <p class="text-success">your id number is {{ nextId }}</p>
+          </div>
+        </div>
+
+        <div class="rowTab">
+          <div class="labeled">
+            <label id="name-label" for="name">* Place: </label>
+          </div>
+          <div class="rightelement">
+            <input autofocus name="origin" formControlName="origin" type="text" id="name" class="inputs"
+              placeholder="Enter the place" required>
+          </div>
+        </div>
+
+        <div class="rowTab">
+          <div class="labeled">
+            <label for="age">* Breed Age: </label>
+          </div>
+          <div class="rightelement">
+            <input name="age" formControlName="age" type="text" id="text" class="inputs" placeholder="Age">
+          </div>
+        </div>
+
+
+        <div class="rowTab">
+          <div class="labeled">
+            <label for="comments">* Temperament</label>
+          </div>
+          <div class="rightelement">
+            <textarea name="temperament" formControlName="temperament" id="comments" class="inputs"
+              placeholder="enter temperament details"></textarea>
+          </div>
+        </div>
+
+        <div class="rowTab">
+          <div class="labeled">
+            <label for="comments">* Price</label>
+          </div>
+          <div class="rightelement">
+            <input name="price" formControlName="price" type="text" id="number" class="inputs" placeholder="Price">
+          </div>
+        </div>
+
+        <div class="rowTab">
+          <div class="labeled">
+            <label for="comments">* Photo</label>
+          </div>
+          <div class="rightelement">
+            <input autofocus name="photo" formControlName="photo" type="text" id="name" class="inputs"
+              placeholder="Enter photo url" required>
+          </div>
+
+        </div>
+
+        <button class="btn btn-outline-primary my-2 my-sm-0" (click)='addBreed()' type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body seller">
+    <h1 id="title">Add Seller details</h1>
+
+    <div id="form-outer">
+      <form [formGroup]="sellerForm" id="survey-form">
+        <div class="rowTab">
+          <div class="labeled">
+            <label id="name-label" for="name">* Seller Name: </label>
+          </div>
+          <div class="rightelement">
+            <input autofocus name="name" formControlName="name" type="text" id="name" class="inputs"
+              placeholder="Enter name" class="form-control" required>
+
+          </div>
+        </div>
+        <div class="rowTab">
+          <div class="labeled">
+            <label id="number-label" for="id">* Seller Id: </label>
+          </div>
+          <div class="rightelement">
+            <input name="id" formControlName="id" type="text" id="number" min="1" max="125" class="inputs"
+              placeholder="id">
+              <p class="text-success">your id number is {{ newId }}</p>
+              
+          </div>
+        </div>
+
+        <div class="rowTab">
+          <div class="labeled">
+            <label id="name-label" for="name">* Contact: </label>
+          </div>
+          <div class="rightelement">
+            <input autofocus name="contact" formControlName="contact" type="text" id="name" class="inputs"
+              placeholder="Enter Contact" required>
+          </div>
+        </div>
+
+        <div class="rowTab">
+          <div class="labeled">
+            <label for="email">* Email: </label>
+          </div>
+          <div class="rightelement">
+            <input name="email" formControlName="email" type="text" id="text" class="inputs" placeholder="Enter Email">
+          </div>
+        </div>
+
+        <div class="rowTab">
+          <div class="labeled">
+            <label for="Location">* Location : </label>
+          </div>
+          <div class="rightelement">
+            <input name="location" formControlName="location" type="text" id="text" class="inputs" placeholder="Enter location">
+          </div>
+        </div>
+        <button class="btn btn-outline-primary my-2 my-sm-0" (click)='addSeller()' type="submit">Submit</button>
+
+
+
+      </form>
+    </div>
+  </div>
+</div>

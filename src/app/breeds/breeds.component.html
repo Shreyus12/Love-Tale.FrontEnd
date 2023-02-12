@@ -1,0 +1,45 @@
+
+
+
+
+<header class="py-1" style="margin-top: -50px;">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-dark">
+            <img  class="animate__animated animate__zoomIn" width="450px" src="https://t3.ftcdn.net/jpg/01/17/84/86/360_F_117848634_VNha2rkTGvZvmt5MG1ZFRVr2utyy94dU.jpg"
+                alt="">
+
+            <h1 class="display-4 fw-bolder text-success">Embrace your friend</h1>
+            
+            
+        </div>
+    </div>
+    
+</header>
+
+
+  
+  <div class="shell" style="margin-top: -80px;">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" >
+        <div class="col mb-5" *ngFor="let breed of breeds | filter : searchItem : 'breed' ">
+          <div class="wsk-cp-product">
+            <div class="wsk-cp-img">
+              <img [src]="breed.photo" alt="Product" class="img-responsive" />
+            </div>
+            <div class="wsk-cp-text">
+              <div class="category">
+                <span>{{breed.breed}}</span>
+              </div>
+              <div class="card-footer">
+                <div class="wcf-left"><span class="price">Rs.{{breed.price}}/-</span></div>
+                <div class="wcf-right"><a class="btn btn-outline-dark mt-auto" routerLink="view-breed/{{breed.id}}">More Details</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
