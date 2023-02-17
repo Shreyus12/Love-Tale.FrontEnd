@@ -1,0 +1,3 @@
+build:
+  environment:
+    NG_BUILD_BUDGETS: '{ "type": "initial", "maximumWarning": "4mb", "maximumError": "10mb" }'
