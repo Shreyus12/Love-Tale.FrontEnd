@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../breeds/services/api.service';
 import { SharedService } from '../breeds/services/shared.service';
+
+
 
 
 @Component({
@@ -11,11 +13,13 @@ import { SharedService } from '../breeds/services/shared.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  
+
+
 
   allBreeds: any[] = []
   nextId = 0;
   newId = 0;
+
 
   breedForm = this.fb.group({
     breed: [''],
@@ -31,15 +35,23 @@ export class HeaderComponent implements OnInit {
     name: [''],
     id: [''],
     contact: [''],
-    email: [''],
     location: [''],
+    count: ['']
 
   })
 
 
 
 
-  constructor(private fb: FormBuilder, private api: ApiService, private router: Router,private sharedService: SharedService) {
+  RegisterForm = this.fb.group({
+    email: [''],
+    pswd: ['']
+
+  })
+
+
+
+  constructor(private activatedRoute: ActivatedRoute,private fb: FormBuilder, private api: ApiService, private router: Router, private sharedService: SharedService) {
 
 
   }
@@ -49,22 +61,18 @@ export class HeaderComponent implements OnInit {
       .subscribe((result: any) => {
         console.log(result);
         this.allBreeds = result
-        
-        
+
+
 
       })
 
-      this.sharedService.getNextId().subscribe((id: number) => {
-        this.nextId = id;
-      });
+    this.sharedService.getNextId().subscribe((id: number) => {
+      this.nextId = id;
+    });
 
-      this.sharedService.getNewId().subscribe((id: number) => {
-        this.newId = id;
-      });
-
-  
-
-      
+    this.sharedService.getNewId().subscribe((id: number) => {
+      this.newId = id;
+    });
 
 
 
@@ -88,11 +96,18 @@ export class HeaderComponent implements OnInit {
 
       this.api.addBreed(breed, id, origin, age, temperament, price, photo).subscribe(
         (result: any) => {
-          console.log("API call to add breed completed");
 
-          alert(result.message)
+
+          // alert(result.message)
           if (result.statusCode === 200) {
-            window.location.reload();
+
+
+  
+
+            const offcanvasRight = document.querySelector('#offcanvasRight') as HTMLElement;
+            offcanvasRight.classList.add('show');
+
+
           }
 
 
@@ -116,17 +131,16 @@ export class HeaderComponent implements OnInit {
       let name = this.sellerForm.value.name
       let id = this.sellerForm.value.id
       let contact = this.sellerForm.value.contact
-      let email = this.sellerForm.value.email
       let location = this.sellerForm.value.location
+      let count = this.sellerForm.value.count
 
-      this.api.addSeller(name, id, contact, email, location).subscribe(
+      this.api.addSeller(name, id, contact,location,count).subscribe(
         (result: any) => {
 
 
           alert(result.message)
-          if (result.statusCode === 200) {
-            window.location.reload();
-          }
+          
+
 
 
         },
@@ -142,12 +156,31 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  Register() {
+
+    if(this.RegisterForm.valid){
+
+    let email = this.RegisterForm.value.email
+    let pswd = this.RegisterForm.value.pswd
+    this.api.register(email,pswd).subscribe(
+      (result:any)=>
+    {
+      alert(result.message)
+      window.location.reload();
 
 
+    },
+    (result:any)=>{
+      alert(result.error.message)
+
+    })
+    }
+    else{
+      alert('Invalid Form')
+    }
 
 
-
-
+  }
 
 
 

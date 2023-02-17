@@ -2,7 +2,7 @@
   Love-Tale <i class="fa-flip-horizontal fa-solid fa-dog blue-color animate__animated animate__flip"></i><i
     class="fa-flip-horizontal fa-solid fa-cat blue-color animate__animated animate__flip"></i></h1>
 
- 
+
 
 
 <div class="banner animate__animated animate__headShake">
@@ -10,6 +10,8 @@
 </div>
 
 <div class="fitter"></div>
+
+
 
 
 
@@ -24,10 +26,10 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
         class="navbar-toggler-icon"></span></button>
-    <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link home text-white" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link home text-white" routerLink="/breeds">Home <span class="sr-only">(current)</span></a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0 d-flex flex-row">
@@ -40,15 +42,16 @@
       <div style="width: 20px;"></div>
 
       <div class="addyours">
-        
-        <button style="height: 50px;"  class="addyour btn btn-outline-light my-2 my-sm-0" type="button"
+
+        <button style="height: 50px;" class="addyour btn btn-outline-light my-2 my-sm-0" type="button"
           data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-          aria-controls="offcanvasWithBothOptions">Add your Pet</button>&nbsp;&nbsp;&nbsp;
+          aria-controls="offcanvasWithBothOptions">Add your breed</button>&nbsp;&nbsp;&nbsp;
 
-        <button style="height: 50px;" class="addyour btn btn-outline-light my-2 my-sm-0" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add Seller Details</button>&nbsp;&nbsp;&nbsp;
 
-        <button  style="height: 50px;" routerLink="/petnews" class="addyour btn btn-outline-light my-2 my-sm-0" type="button">Pet News</button>
+        <button style="height: 50px;" routerLink="/petnews" class="addyour btn btn-outline-light my-2 my-sm-0"
+          type="button">Pet News</button>
+
+          
 
       </div>
 
@@ -66,11 +69,17 @@
 
 
 
+
+
+
+
+
+
 <!-- off canvas Left-->
 
 
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-  aria-labelledby="offcanvasWithBothOptionsLabel" >
+  aria-labelledby="offcanvasWithBothOptionsLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"></h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -79,7 +88,7 @@
 
     <h1 id="title">Add your Pet</h1>
 
-    <div id="form-outer" >
+    <div id="form-outer">
       <form [formGroup]="breedForm" id="survey-form">
         <div class="rowTab">
           <div class="labeled">
@@ -98,7 +107,7 @@
           <div class="rightelement">
             <input name="id" formControlName="id" type="text" id="number" min="1" max="125" class="inputs"
               placeholder="id">
-              <p class="text-success">your id number is {{ nextId }}</p>
+            <p class="text-success">your id number is {{ nextId }}</p>
           </div>
         </div>
 
@@ -185,15 +194,16 @@
 
           </div>
         </div>
+
         <div class="rowTab">
           <div class="labeled">
             <label id="number-label" for="id">* Seller Id: </label>
           </div>
           <div class="rightelement">
-            <input name="id" formControlName="id" type="text" id="number" min="1" max="125" class="inputs"
+            <input name="id" formControlName="id"  type="text" id="number" min="1" max="125" class="inputs"
               placeholder="id">
-              <p class="text-success">your id number is {{ newId }}</p>
-              
+            <p class="text-success">your id number is {{ newId }}</p>
+
           </div>
         </div>
 
@@ -207,28 +217,59 @@
           </div>
         </div>
 
-        <div class="rowTab">
-          <div class="labeled">
-            <label for="email">* Email: </label>
-          </div>
-          <div class="rightelement">
-            <input name="email" formControlName="email" type="text" id="text" class="inputs" placeholder="Enter Email">
-          </div>
-        </div>
 
         <div class="rowTab">
           <div class="labeled">
             <label for="Location">* Location : </label>
           </div>
           <div class="rightelement">
-            <input name="location" formControlName="location" type="text" id="text" class="inputs" placeholder="Enter location">
+            <input name="location" formControlName="location" type="text" id="text" class="inputs"
+              placeholder="Enter location">
           </div>
         </div>
+
+        <div class="rowTab">
+          <div class="labeled">
+            <label for="Location">* No. puppies available : </label>
+          </div>
+          <div class="rightelement">
+            <input name="count" formControlName="count" type="number" id="text" class="inputs"
+              placeholder="Enter Number">
+          </div>
+        </div>
+
         <button class="btn btn-outline-primary my-2 my-sm-0" (click)='addSeller()' type="submit">Submit</button>
 
+      </form>
 
+      <form [formGroup]="RegisterForm" id="survey-form">
+        <div class="rowTab">
+          <div class="labeled">
+            <label id="name-label" for="email">* Seller Email: </label>
+          </div>
+          <div class="rightelement">
+            <input autofocus name="email" formControlName="email" type="email" id="name" class="inputs"
+              placeholder="Enter Email" class="form-control" required>
+
+          </div>
+        </div>
+
+        <div class="rowTab">
+          <div class="labeled">
+            <label id="number-label" for="pswd">* Seller password: </label>
+          </div>
+          <div class="rightelement">
+            <input name="pswd" formControlName="pswd"  type="password" id="number" min="1" max="125" class="inputs"
+              placeholder="password">
+
+          </div>
+        </div>
+        <button class="btn btn-outline-primary my-2 my-sm-0" (click)='Register()' type="submit">Register</button>
 
       </form>
+
+
     </div>
   </div>
 </div>
+

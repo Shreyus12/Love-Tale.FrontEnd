@@ -1,0 +1,71 @@
+<div class="shell" style="margin-top: -60px;">
+    <div class="container px-2 px-lg-5">
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4" >
+        <div class="col mb-5"  *ngFor="let breed of sellerlist">
+          <div class="wsk-cp-product">
+            <div class="wsk-cp-img">
+              <img [src]="breed.photo" alt="breed" class="img-responsive" />
+            </div>
+            <div class="wsk-cp-text">
+              <div class="category">
+                <span>{{breed.breed}}</span>
+              </div>
+              <div class="card-footer">
+                <div class="wcf-left"><span class="price">Rs.{{breed.price}}/-</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <div class="shopping-list">
+            <span class="shopping-arrow"></span>
+            <p class="list-title">Enquiry Details</p>
+            <ul class="list-form">
+    
+  
+              <li class="shopping-product" *ngFor="let user of user">
+                <div class="row" style="width: 270px;">
+                  <div class="col-md-4 col-4">
+                    <i class="fa-solid fa-user text-primary"></i>
+                    <strong class="margin-10px-left text-primary"> Name:</strong>
+                  </div>
+                  <div class="col-md-4 col-4">
+                    <p>{{user.name}}</p>
+                  </div>
+                </div>
+        
+                <div class="row">
+                  <div class="col-md-4 col-4">
+                    <i class="fas fa-mobile-alt text-danger"></i>
+                    <strong class="margin-10px-left xs-margin-four-left text-danger">Phone:</strong>
+                  </div>
+                  <div class="col-md-4 col-4">
+                    <p>{{user.phone}}</p>
+                  </div>
+                </div>
+        
+                <div class="row">
+                  <div class="col-md-4 col-4">
+                    <i class="fas fa-map-marker-alt text-danger"></i>
+                    <strong class="margin-10px-left text-danger"> Email:</strong>
+                  </div>
+                  <div class="col-md-4 col-4">
+                    <p>{{user.email}}</p>
+                  </div>
+                </div>
+    
+              </li>
+  
+    
+            </ul>
+    
+            <hr />
+    
+        </div>     
+    </div>
+
+  </div>
+
+<div class="text-center">
+  <button (click)="checkout()" class="btn btn-outline-primary mt-auto" style="width: 150px; height: 50px;">Logout</button>
+</div>

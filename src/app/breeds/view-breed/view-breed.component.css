@@ -1,0 +1,163 @@
+
+nav .navbar-right {
+  float: right;
+}
+
+nav ul li {
+  display: inline;
+  padding-left: 20px;
+}
+
+nav ul li a {
+  color: #00acde;
+  text-decoration: none;
+  padding: 6px;
+  background-image: url(http://127.0.0.1/shopping-icon.png);
+  background-position: 40px 7px;
+}
+
+nav ul li a:hover {
+  color: #666;
+}
+
+
+
+ul,
+ol {
+  list-style: none;
+  -webkit-padding-start: 0px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+.shopping-list {
+  width: 360px;
+  padding: 5px 15px 10px 15px;
+  float: right;
+  margin-left: 100px;
+  background-color: #f2f2f2;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+}
+
+.shopping-arrow {
+  display: block;
+  position: absolute;
+  top: -20px;
+  right: 9px;
+  border-color: transparent transparent #f2f2f2 transparent;
+  border-style: solid solid solid solid;
+  border-width: 10px;
+  height: 0px;
+  width: 0px;
+}
+
+.list-title {
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.list-form {
+  float: left;
+  width: 315px;
+}
+
+.list-form li {
+  background-color: #ffffff;
+  padding: 10px 8px;
+  margin-bottom: 10px;
+}
+
+.shopping-product .product-photo {
+  float: left;
+  margin-right: 10px;
+  width: 70px;
+}
+
+.product-photo img {
+  width: 100%;
+}
+
+.shopping-product .product-spec {
+  float: left;
+  width: 225px;
+}
+
+.goods-info {
+  display: block;
+  padding: 0px 0px 7px 0px;
+}
+
+.price-name,
+.quty-name {
+  display: block;
+  color: #53297e;
+  padding-top: 3px;
+  font-size: 1.1rem;
+}
+
+.goods-price,
+.goods-quty {
+  position: absolute;
+  left: 35px;
+}
+
+.goods-remove {
+  display: inline-flex;
+  margin-left: 160px;
+}
+
+.goods-remove a {
+  border: 1px solid #999;
+  border-radius: 2px;
+  color: #999;
+  font-size: 0.75rem;
+  text-decoration: none;
+  padding: 3px 7px 3px 22px;
+  background-image: url(http://127.0.0.1/shopping-icon.png);
+  background-position: 5px -79px;
+}
+
+.total-price .cart-subtotal {
+  display: inline-block;
+  width: 40%;
+  float: left;
+  font-weight: bold;
+}
+
+.total-money {
+  display: block;
+  color: #c1272d;
+  font-size: 1.5rem;
+  padding-top: 5px;
+}
+
+.total-price {
+  display: block;
+  padding: 10px 20px;
+}
+
+.cart-subtotal {
+  font-size: 1.15rem;
+}
+
+.total-price .order-goods {
+  display: inline-block;
+  float: right;
+}
+
+.order-goods a {
+  background: #00acde;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.15rem;
+  text-decoration: none;
+  padding: 5px 15px 5px 30px;
+  background-image: url(http://127.0.0.1/shopping-icon.png);
+  background-position: 6px -55px;
+  top: 15px;
+  margin-left: 25px;
+}
+
+.clear {
+  clear: both;
+}

@@ -1,34 +1,9 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container my-5">
+<div class="container-fluid mt-5">
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-5">
       <img [src]="viewBreed.photo" class="img-fluid">
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4 mb-5">
       <h3 class="my-3 fs-1"><b>{{viewBreed.breed}}</b></h3>
       <p class="fs-3">place : {{viewBreed.origin}}</p>
       <p class="fs-3">Age : {{viewBreed.age}}</p>
@@ -37,11 +12,24 @@
       <p class="fs-3">intelligence : {{viewBreed.intelligence}}</p>
       <h3 class="my-3">Price : Rs {{viewBreed.price}}/-</h3>
       <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Book Now
-      </button>
+        View Seller Details
+      </button>&nbsp;
+      <button type="button" data-bs-toggle="modal" data-bs-target="#LoginModal"
+      class="btn btn-primary btn-lg">
+      View Enquiry details
+    </button>&nbsp;
+    <button (click)="checkout();deleteItem(breedId);deleteSeller(sellerId)" type="button"
+    class="btn btn-danger btn-lg">
+    Delete Ad
+  </button>
     </div>
   </div>
 </div>
+
+
+
+
+
 
 
 
@@ -54,7 +42,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Seller Details</h1>
+        <h1 class="modal-title fs-5 text-danger" id="staticBackdropLabel">Seller Details</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -72,8 +60,8 @@
 
         <div class="row">
           <div class="col-md-5 col-5">
-            <i class="fas fa-mobile-alt text-purple"></i>
-            <strong class="margin-10px-left xs-margin-four-left text-purple">Phone:</strong>
+            <i class="fas fa-mobile-alt text-danger"></i>
+            <strong class="margin-10px-left xs-margin-four-left text-danger">Phone:</strong>
           </div>
           <div class="col-md-7 col-7">
             <p>{{viewSeller.contact}}</p>
@@ -82,37 +70,27 @@
 
         <div class="row">
           <div class="col-md-5 col-5">
-            <i class="fas fa-envelope text-pink"></i>
-            <strong class="margin-10px-left xs-margin-four-left text-pink">Email:</strong>
-          </div>
-          <div class="col-md-7 col-7">
-            <p><a><span>{{viewSeller.email}}</span></a></p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-5 col-5">
-            <i class="fas fa-map-marker-alt text-green"></i>
-            <strong class="margin-10px-left text-green"> Place:</strong>
+            <i class="fas fa-map-marker-alt text-danger"></i>
+            <strong class="margin-10px-left text-danger"> Place:</strong>
           </div>
           <div class="col-md-7 col-7">
             <p>{{viewSeller.location}}</p>
           </div>
         </div>
 
-        <h3 class="text-success-emphasis">{{checkoutMsg}}</h3>
+
 
 
 
       </div>
-      <div style="float: left; margin-left: 10px;"><button type="button" class="btn btn-warning" data-bs-toggle="modal"
-          data-bs-target="#fordelivery">For Delivery</button></div>
+
 
 
       <div class="modal-footer">
 
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button (click)="checkout();deleteItem(breedId);deleteSeller(sellerId)" type="button" class="btn btn-primary">Book</button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#fordelivery" class="btn btn-primary">Enter Enquiry
+          details</button>
       </div>
     </div>
   </div>
@@ -134,62 +112,48 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Enter delivery details</h1>
+        <h1 class="modal-title fs-5 text-primary" id="staticBackdropLabel">Enter Enquiry details</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
 
+        <form [formGroup]="userForm" id="survey-form">
+          <div class="row">
+            <div class="col-5">
+              <i class="fa-solid fa-user text-primary"></i>
+              <strong class="margin-10px-left text-primary"> Name:</strong>
+            </div>
+            <div class="col-7">
+              <input autofocus name="name" formControlName="name" type="text" placeholder="Enter name"
+                class="form-control" required>
+            </div>
+          </div>
 
-        <div class="row">
-          <div class="col-5">
-            <i class="fa-solid fa-user text-primary"></i>
-            <strong class="margin-10px-left text-primary"> Name:</strong>
+          <div class="row">
+            <div class="col-md-5 col-5">
+              <i class="fas fa-mobile-alt text-danger"></i>
+              <strong class="margin-10px-left xs-margin-four-left text-danger">Phone:</strong>
+            </div>
+            <div class="col-md-7 col-7">
+              <input name="phone" formControlName="phone" autofocus type="text" placeholder="Enter Phone Number"
+                class="form-control" required>
+            </div>
           </div>
-          <div class="col-7">
-            <input autofocus type="text" placeholder="Enter name" class="form-control" required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-5 col-5">
-            <i class="fas fa-mobile-alt text-purple"></i>
-            <strong class="margin-10px-left xs-margin-four-left text-purple">Phone:</strong>
-          </div>
-          <div class="col-md-7 col-7">
-            <input autofocus type="text" placeholder="Enter Phone Number" class="form-control" required>
-          </div>
-        </div>
 
 
-        <div class="row">
-          <div class="col-md-5 col-5">
-            <i class="fas fa-map-marker-alt text-green"></i>
-            <strong class="margin-10px-left text-green"> Address:</strong>
+          <div class="row">
+            <div class="col-md-5 col-5">
+              <i class="fas fa-map-marker-alt text-primary"></i>
+              <strong class="margin-10px-left text-primary "> Email :</strong>
+            </div>
+            <div class="col-md-7 col-7">
+              <input name="email" formControlName="email" autofocus type="text" placeholder="Enter Email Address"
+                class="form-control" required>
+            </div>
           </div>
-          <div class="col-md-7 col-7">
-            <input autofocus type="text" placeholder="Enter Street Address" class="form-control" required>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-md-5 col-5">
-            <i class="fas fa-map-marker-alt text-green"></i>
-            <strong class="margin-10px-left text-green"> City:</strong>
-          </div>
-          <div class="col-md-7 col-7">
-            <input autofocus type="text" placeholder="Enter City" class="form-control" required>
-          </div>
-        </div>
+        </form>
 
-        <div class="row">
-          <div class="col-md-5 col-5">
-            <i class="fas fa-map-marker-alt text-green"></i>
-            <strong class="margin-10px-left text-green"> Pin-Code:</strong>
-          </div>
-          <div class="col-md-7 col-7">
-            <input autofocus type="text" placeholder="Enter Pin-Code" class="form-control" required>
-          </div>
-        </div>
 
         <h3 class="text-success-emphasis">{{deliveryMsg}}</h3>
 
@@ -197,11 +161,11 @@
 
       </div>
 
-
-
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button (click)="checkout();deleteItem(breedId)" type="button" class="btn btn-primary">Deliver</button>
+        <button type="submit" (click)="adduser()" class="btn btn-primary">Send Enquiry</button>
+
+
       </div>
     </div>
   </div>
@@ -209,10 +173,38 @@
 </div>
 
 
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- for login -->
 
 
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Please Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form  [formGroup]="loginForm">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input name="email" formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id=" mailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input name="pswd" formControlName="pswd" type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="text-danger">{{errorMsg}}</div>
 
+          <button (click)="login()" type="submit" class="btn btn-primary">Login <span *ngIf="successMsg" class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </span></button>
+        </form>
 
+      </div>
 
-
-
+    </div>
+  </div>
+</div>

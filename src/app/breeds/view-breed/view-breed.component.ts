@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
+
 
 @Component({
   selector: 'app-view-breed',
@@ -11,24 +13,49 @@ export class ViewBreedComponent {
 
   breed: any=[]
   breedImages: any=[];
-
-
-
   breedId: any;
   sellerId: any;
   viewBreed: any;
   viewSeller: any;
   checkoutMsg = ""
   allbreed: any;
-  deliveryMsg: any;
+
   allseller: any;
+  deliveryMsg: any;
+
+  userForm = this.fb.group({
+    name: [''],
+    phone: [''],
+    email: ['']
+
+  })
+
+  user:any=[]
+
+  loginForm= this.fb.group({
+
+    email:[''],
+    pswd:['']
+
+  })
+  errorMsg:string=''
+  successMsg:boolean=false
 
 
-  constructor(private activatedRoute: ActivatedRoute, private api: ApiService, private router: Router) {
+
+  constructor(private fb: FormBuilder,private activatedRoute: ActivatedRoute, private api: ApiService, private router: Router) {
 
   }
 
   ngOnInit(): void {
+
+    this.api.alluser()
+    .subscribe((result:any)=>
+    {
+      this.user = result.user
+      console.log(result.user);
+      
+    })
 
     this.activatedRoute.params
       .subscribe((data: any) => {
@@ -37,7 +64,6 @@ export class ViewBreedComponent {
 
       })
 
-    // to get details of product
 
     this.api.viewBreed(this.breedId)
       .subscribe((result: any) => {
@@ -55,7 +81,6 @@ export class ViewBreedComponent {
 
       })
 
-    // to get details of seller
 
     this.api.viewSeller(this.sellerId)
       .subscribe((result: any) => {
@@ -72,7 +97,7 @@ export class ViewBreedComponent {
 
   checkout() {
     this.checkoutMsg = "Successfully Booked"
-    this.deliveryMsg = "Will be delivered within 2-3 days"
+    this.deliveryMsg = "Enquiry Successful"
     setTimeout(() => {
 
       this.router.navigateByUrl('').then(() => {
@@ -108,19 +133,91 @@ export class ViewBreedComponent {
         })
   }
 
+  adduser() {
+
+    if (this.userForm.valid) {
+      let name = this.userForm.value.name
+      let phone = this.userForm.value.phone
+      let email = this.userForm.value.email
+
+
+      this.api.adduser(name, phone, email).subscribe(
+        (result: any) => {
+
+
+          alert(result.message)
+          window.location.reload();
 
 
 
+        },
+        (result: any) => {
+          alert(result.error.message)
+
+        })
+    }
+    else {
+      alert('Invalid Form')
+    }
 
 
+  }
 
+  login() {
 
+    if(this.loginForm.valid){
 
+    let email = this.loginForm.value.email
+    let pswd = this.loginForm.value.pswd
+    this.api.login(email,pswd)
+    .subscribe(
+      (result:any)=>
+      {
+        this.successMsg=true
+        localStorage.setItem("currentEmail",JSON.stringify(result.currentEmail))
+        setTimeout(()=>{
+          this.router.navigateByUrl('/breeds/seller') 
+          this.router.navigateByUrl('/breeds/seller') 
+
+        },2000)
+        
+      },
+      (result:any)=>{
+        this.errorMsg = result.error.message
+      }
+    )
+    }
+    else{
+      alert('Invalid Form')
+    }
+
+  }
+
+  addtosellerlist(breed:any)
+  {
+   this.api.addtosellerlist(breed)
+   .subscribe(
+     (result:any)=>
+   {
+     alert(result.message)
+ 
+   },
+   (result:any)=>
+   {
+     alert(result.error.message)
+   })
+  }
 
 
 
 
 }
+
+
+
+
+
+
 
 
 

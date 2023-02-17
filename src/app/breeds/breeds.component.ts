@@ -1,8 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { ApiService } from './services/api.service';
 import { SharedService } from './services/shared.service';
+
+
+
+
+
 
 @Component({
   selector: 'app-breeds',
@@ -19,10 +25,20 @@ export class BreedsComponent implements OnInit {
   nextId: number = 0;
   newId: number = 0;
 
+  
+  loginForm= this.fb.group({
+
+    email:[''],
+    pswd:['']
+
+  })
+  errorMsg:string=''
+  successMsg:boolean=false
 
 
 
-  constructor(private api:ApiService,private router:Router,private sharedService: SharedService)
+
+  constructor(private fb: FormBuilder,private api:ApiService,private router:Router,private sharedService: SharedService)
   {
 
   }
@@ -63,19 +79,12 @@ export class BreedsComponent implements OnInit {
     })
 
 
-      
-
-
-
-
-
-
-
+     }
 
 
     
+
     
-  }
 
   
 

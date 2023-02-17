@@ -12,13 +12,19 @@ import { PetnewsComponent } from './petnews/petnews.component';
 
 
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     PagenotfoundComponent,
-    PetnewsComponent
+    PetnewsComponent,
+
+   
+    
     
     
   ],
