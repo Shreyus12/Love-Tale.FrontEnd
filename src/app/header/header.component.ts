@@ -102,11 +102,9 @@ export class HeaderComponent implements OnInit {
           if (result.statusCode === 200) {
 
 
+            alert(result.message)
+
   
-
-            const offcanvasRight = document.querySelector('#offcanvasRight') as HTMLElement;
-            offcanvasRight.classList.add('show');
-
 
           }
 
