@@ -211,7 +211,7 @@ a.buy-btn:focus {
     margin: 0 5px;
 }
 
-@media screen and (max-width: 591px) {
+@media screen and (max-width: 500px) {
     .wsk-cp-product {
         margin: 40px auto;
     }
@@ -249,9 +249,9 @@ a.buy-btn:focus {
         top: -20px;
     }
 
-    .wsk-cp-product {
+    .wsk-cp-product .wsk-cp-text {
 
-        width: 100px;
+        width: 140px;
 
 
 
@@ -259,7 +259,7 @@ a.buy-btn:focus {
     }
 
     .wsk-cp-img img {
-        height: 180px;
+        height: 140px;
     }
 
 }
