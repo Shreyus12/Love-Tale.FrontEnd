@@ -251,7 +251,7 @@ a.buy-btn:focus {
 
     .wsk-cp-product {
 
-        width: 260px;
+        width: 200px;
 
 
 
@@ -259,7 +259,7 @@ a.buy-btn:focus {
     }
 
     .wsk-cp-img img {
-        height: 210px;
+        height: 180px;
     }
 
 }
