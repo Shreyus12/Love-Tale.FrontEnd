@@ -216,8 +216,8 @@ a.buy-btn:focus {
         margin: 40px auto;
     }
 
-    .wsk-cp-product .wsk-cp-img {
-        top: -40px;
+    .wsk-cp-img {
+        top: -20px;
     }
 
     .wsk-cp-product .wsk-cp-img img {
