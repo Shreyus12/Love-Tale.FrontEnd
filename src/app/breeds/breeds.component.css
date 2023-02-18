@@ -211,7 +211,7 @@ a.buy-btn:focus {
     margin: 0 5px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 591px) {
     .wsk-cp-product {
         margin: 40px auto;
     }
@@ -243,7 +243,7 @@ a.buy-btn:focus {
 
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 500px) {
 
     .wsk-cp-product:hover  {
         top: -20px;
@@ -263,6 +263,8 @@ a.buy-btn:focus {
     }
 
 }
+
+
 
 
 
