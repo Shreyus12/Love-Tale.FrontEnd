@@ -23,7 +23,7 @@ export class ApiService {
 
 getAllBreeds()
 {
- return this.http.get('http://localhost:3000/all-Breeds')
+ return this.http.get(`${this.baseUrl}/all-Breeds`)
 
 }
 
@@ -31,7 +31,7 @@ getAllBreeds()
 
 viewBreed(breedId:any)
 {
- return this.http.get('http://localhost:3000/view-breeds/'+breedId)
+ return this.http.get(`${this.baseUrl}/view-breeds/`+breedId)
 }
 
 
@@ -47,7 +47,7 @@ addBreed(breed: any, id: any, origin: any,age: any,temperament: any, price: any,
     price,
     photo
   }
-  return this.http.post('http://localhost:3000/add-Breeds',body)
+  return this.http.post(`${this.baseUrl}/add-Breeds`,body)
   
   
 }
@@ -56,18 +56,18 @@ addBreed(breed: any, id: any, origin: any,age: any,temperament: any, price: any,
 
 allSellers()
 {
- return this.http.get('http://localhost:3000/all-Sellers')
+ return this.http.get(`${this.baseUrl}/all-Sellers`)
 
 }
 
 viewSeller(sellerId:any)
 {
- return this.http.get('http://localhost:3000/view-sellers/'+sellerId)
+ return this.http.get(`${this.baseUrl}/view-sellers/`+sellerId)
 }
 
 
 getNews() {
-  return this.http.get<Response>('http://localhost:3000/news');
+  return this.http.get<Response>(`${this.baseUrl}/news`);
 }
 
 
@@ -76,7 +76,7 @@ addSeller(name: any, id: any, contact: any,location: any,count: any) {
   const body = {
     name, id, contact, location, count
   }
-  return this.http.post('http://localhost:3000/add-Seller',body)
+  return this.http.post(`${this.baseUrl}/add-Seller`,body)
   
   
 }
@@ -86,7 +86,7 @@ adduser(name: any, phone: any, email: any) {
   const body = {
     name, phone, email
   }
-  return this.http.post('http://localhost:3000/add-user',body)
+  return this.http.post(`${this.baseUrl}/add-user`,body)
   
   
 }
@@ -94,7 +94,7 @@ adduser(name: any, phone: any, email: any) {
 
 alluser()
 {
- return this.http.get('http://localhost:3000/all-user')
+ return this.http.get(`${this.baseUrl}/all-user`)
 
 }
 
@@ -103,7 +103,7 @@ register(email: any,pswd: any) {
     email,
     pswd
   }
-  return this.http.post('http://localhost:3000/register',body)
+  return this.http.post(`${this.baseUrl}/register`,body)
 
 }
 
@@ -111,31 +111,31 @@ login(email:any,pswd:any){
   const body={
     email,pswd
   }
-  return this.http.post('http://localhost:3000/login',body)
+  return this.http.post(`${this.baseUrl}/login`,body)
 
 
 }
 
 addtosellerlist(breed:any)
 {
-  return this.http.post('http://localhost:3000/add-to-sellerlist',breed)
+  return this.http.post(`${this.baseUrl}/add-to-sellerlist`,breed)
 }
 
 getsellerlist()
 {
-  return this.http.get('http://localhost:3000/get-sellerlist')
+  return this.http.get(`${this.baseUrl}/get-sellerlist`)
 
 }
 
 deleteItemAllbreed(breedId:any){
-  return this.http.delete('http://localhost:3000/remove-item-all-Breeds/'+breedId)
+  return this.http.delete(`${this.baseUrl}/remove-item-all-Breeds/`+breedId)
 
 }
 
 
 deleteItemAllseller(sellerId:any){
 
-  return this.http.delete('http://localhost:3000/remove-item-all-Sellers/'+sellerId)
+  return this.http.delete(`${this.baseUrl}/remove-item-all-Sellers/`+sellerId)
 
 }
 
