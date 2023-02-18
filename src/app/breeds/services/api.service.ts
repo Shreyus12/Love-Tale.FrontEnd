@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl = 'https://lovetale-backend.onrender.com';
 
 
 
