@@ -239,6 +239,12 @@ a.buy-btn:focus {
         background: #ff9800;
         color: #fff;
     }
+    .shell {
+        padding: 10px 0;
+    
+    
+    
+    }
 }
 
 
