@@ -248,7 +248,7 @@ a.buy-btn:focus {
 @media only screen and (max-width: 500px) {
 
 
-    .col .wsk-cp-product .wsk-cp-text .category .card-footer{
+    .container .col .wsk-cp-product .wsk-cp-text .category .card-footer{
 
         width: 140px;
         height: 140px;
