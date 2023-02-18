@@ -18,10 +18,28 @@
       class="btn btn-primary btn-lg">
       View Enquiry details
     </button>&nbsp;
-    <button (click)="checkout();deleteItem(breedId);deleteSeller(sellerId)" type="button"
+    <button (click)="checkout();deleteItem(breedId);deleteSeller(sellerId)" data-bs-toggle="modal" data-bs-target="#author" type="button"
     class="btn btn-danger btn-lg">
     Delete Ad
   </button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="author" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content ">
+      <div class="modal-body">
+        <h1 class="text-danger">Need Authorisation for deletion</h1>
+        <p>Please contact the Admin</p>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
 </div>
