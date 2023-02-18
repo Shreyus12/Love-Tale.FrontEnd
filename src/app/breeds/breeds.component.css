@@ -228,6 +228,7 @@ a.buy-btn:focus {
         border-color: #ddd;
         box-shadow: none;
         padding: 2px 5px;
+        padding-top: 0%
     }
 
     .wsk-cp-product .wsk-cp-text .category {
@@ -239,12 +240,7 @@ a.buy-btn:focus {
         background: #ff9800;
         color: #fff;
     }
-    .shell {
-        padding: 10px 0;
     
-    
-    
-    }
 }
 
 
@@ -252,9 +248,10 @@ a.buy-btn:focus {
 @media only screen and (max-width: 500px) {
 
 
-    .wsk-cp-product .wsk-cp-text {
+    .col .wsk-cp-product .wsk-cp-text .category .card-footer{
 
         width: 140px;
+        height: 140px;
 
     }
 
