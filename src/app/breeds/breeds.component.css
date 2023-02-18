@@ -245,9 +245,9 @@ a.buy-btn:focus {
 
 @media only screen and (max-width: 700px) {
 
-    .wsk-cp-product:hover  {
+    /* .wsk-cp-product:hover  {
         top: -20px;
-    }
+    } */
 
     .wsk-cp-product {
 
