@@ -212,13 +212,13 @@ a.buy-btn:focus {
 }
 
 @media screen and (max-width: 500px) {
-    .wsk-cp-product {
+    /* .wsk-cp-product {
         margin: 40px auto;
     }
 
     .wsk-cp-product .wsk-cp-img {
         top: -40px;
-    }
+    } */
 
     .wsk-cp-product .wsk-cp-img img {
         box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -245,21 +245,15 @@ a.buy-btn:focus {
 
 @media only screen and (max-width: 500px) {
 
-    .wsk-cp-product:hover  {
-        top: -20px;
-    }
 
     .wsk-cp-product .wsk-cp-text {
 
         width: 140px;
 
-
-
-
     }
 
     .wsk-cp-img img {
-        
+
         width: 140px;
         height: 140px;
     }
